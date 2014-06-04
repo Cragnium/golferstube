@@ -1,0 +1,52 @@
+<br>
+<br>
+<div class="borderOne">
+    <div class="gradientHead">Create Tip</div><br>
+<div style="float:left;padding:10px;">
+    <div class="formLabels">Available Categories :</div><div style="float:left;width:80px;"><select data-ng-model="category.categoryId" data-ng-options="category.name for category in categories"></select></div>
+</div>
+<div style="float:left;padding:10px;">
+    <div class="formLabels">Name :</div><div style="float:left;"><input data-ng-model="tipCategory.name" type="text" placeholder="Category Name"></div><br><div style="clear:both;"></div>
+    <div class="formLabels">Description :</div><div style="float:left;"><input data-ng-model="tipCategory.description" type="text" placeholder="Description"/></div><br><div style="clear:both;"></div>
+</div>
+<div style="float:left;padding:10px;">
+    <button id="submitTipCategory" class="btn btn-primary" type="button" data-ng-click="createTipCategory(tipCategory)"><div class="formButtons">Create Category</div></button>
+</div>
+<div style="clear:both;"></div>
+<div style="float:left;padding:10px;">
+    <div class="formLabels">Available Subcategories :</div><div style="float:left;width:80px;"><select data-ng-model="subcategory.subcategoryId" data-ng-options="subcategory.name for subcategory in subcategories"></select></div>
+</div>
+<div style="float:left;padding:10px;">
+    <div class="formLabels">Name :</div><div style="float:left;"><input data-ng-model="tipSubcategory.name" type="text" placeholder="Subcategory Name"></div><br><div style="clear:both;"></div>
+    <div class="formLabels">Description :</div><div style="float:left;"><input data-ng-model="tipSubcategory.description" type="text" placeholder="Description"/></div><br><div style="clear:both;"></div>
+</div>
+<div style="float:left;padding:10px;">
+    <button id="submitTipSubcategory" class="btn btn-primary" type="button" data-ng-click="createTipSubcategory(tipSubcategory, category.categoryId)"><div class="formButtons">Create Subcategory</div></button>
+</div>
+<div style="clear:both;"></div>
+<div style="float:left;padding:10px;">
+    <div class="formLabels">Tips:</div><div style="float:left;width:80px"><select data-ng-model="tip.tipId" data-ng-options="tip.name for tip in tips"></select></div>
+</div>
+<div style="float:left;padding:10px;">
+    <div class="formLabels">Tip Name:</div><div style="float:left;"><input data-ng-model="tip.name" type="text" placeholder="Tip Name"/></div>
+    <div style="float:left;padding:10px;"><button class="btn btn-primary" type="button" data-ng-click="createTip(subcategory.subcategoryId, tip)"><div class="formButtons">Create Tip</div></button></div><div style="clear:both;"></div>
+    <div class="formLabels">Tip Description:</div><div style="float:left;"><textarea rows="10" cols="50" data-ng-model="tip.tip" placeholder="Add tip here"></textarea></div><br><div style="clear:both;"></div>
+    <div class="formLabels">Tip Video:</div><div style="float:left;"><input class="formButtons" file-model="tip.video" type="file" /></div><br><div style="clear:both;"></div>
+</div>
+<div style="clear:both;"></div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

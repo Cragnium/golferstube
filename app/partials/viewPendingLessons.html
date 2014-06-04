@@ -1,0 +1,32 @@
+<div style="margin:0 auto;">
+<div style="float:left;width:200px;">Tournament</div>
+<div style="float:left;width:200px;">Email</div>
+<div style="float:left;width:200px;">Requested Date</div>
+<div style="float:left;width:200px;">Assigned Pro</div>
+
+
+<div style="clear:both;"></div>
+<div ng-repeat="lesson in lessons">
+    <div style="float:left;width:200px;"><a style="text-decoration:none;" href="index.html#/viewLessonInfo/{{lesson.lessonId}}">{{lesson.tournament.tournamentName}}</a></div>
+    <div style="float:left;width:200px;">{{lesson.student.email}}</div>
+    <div style="float:left;width:100px;">{{lesson.requestedDate}}</div>
+    <div style="float:left;width:200px;">{{getProName(lesson)}}</div>
+    <div style="clear:both;"></div>
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

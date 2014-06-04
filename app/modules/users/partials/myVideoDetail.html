@@ -1,0 +1,39 @@
+<video id="example_video_1" class="video-js vjs-default-skin"
+       controls preload="auto" width="640" height="264"
+       poster="http://video-js.zencoder.com/oceans-clip.png"
+       data-setup='{"example_option":true}'>
+    <source src="{{videoSource}}" type='video/mp4' />
+</video>
+
+
+
+<div style="margin:0 auto;">
+    <div style="float:left;">
+        Video<br>
+        Information
+    </div>
+    <div style="float:left;">
+        <div style="float:left;">Video Name:</div><div style="float:right;"></div><input type="text" ng-model="userVideo.video.videoName"/><div style="clear:both;"></div>
+        <div style="float:left;">Video Description:</div><div style="float:right;"><input type="text" ng-model="userVideo.video.description"/></div><div style="clear:both;"></div>
+        <div style="float:left;">Tags:</div><div style="float:right;"><input type="text" ng-model="userVideo.video.tags"/></div><div style="clear:both"></div>
+        <div style="float:left;">Number of times Rated:</div><div style="float:right;">{{timesRated}}</div><div style="clear:both;"></div>
+        <div style="float:left;">Number of times Viewed:</div><div style="float:right;">{{userVideo.video.numberOfTimesViewedFinished}}</div><div style="clear:both;"></div>
+        <div style="float:left;">This video is :</div><div style="float:right;"></div>
+        <div style="float:left;"></div><div style="float:right;"></div><div style="clear:both;"></div>
+    </div>
+    <div style="float:left;">
+        RATING: X.XX
+    </div>
+</div>
+<div style="clear:both;"></div>
+<div style="margin:auto;">
+    <div style="float:left;">
+        Video<br>
+        Comments
+    </div>
+    <div style="float:left">
+        <div ng-repeat="comment in comments">
+            snap
+        </div>
+    </div>
+</div>

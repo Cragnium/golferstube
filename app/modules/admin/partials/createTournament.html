@@ -1,0 +1,27 @@
+<br>
+<br>
+<div class="borderOne">
+    <div class="gradientHead">Create Tournament</div><br>
+    <fieldset class="fieldsetText" style="margin-bottom:10px;"><legend>Tournament Information</legend>
+<div class="formLabels">Location:</div><div style="float:left;"><select data-ng-model="tournament.courseId" data-ng-options="course.name for course in courses"></select></div><br><div style="clear:both;"></div>
+<div class="formLabels">Start Date:</div><div style="float:left;"><input data-ng-model="tournament.startDate" type="text" name="date" id="date" /><input type="button" id="calendarButton" class="formButtons" value="Show Calendar" /></div><div style="clear:both;"></div>
+<div class="formLabels">Sponsor Name:</div><div style="float:left;"><input data-ng-model="tournament.sponsorName" type="text" placeholder="Sponsor Name"></div><br><div style="clear:both;"></div>
+<div class="formLabels">Tournament Name:</div><div style="float:left;"><input data-ng-model="tournament.tournamentName" type="text" placeholder="Tournament Name"></div><br><div style="clear:both;"></div>
+<div class="formLabels">Contact First Name:</div><div style="float:left;"><input data-ng-model="tournament.firstName" type="text" placeholder="First Name"></div><br><div style="clear:both;"></div>
+<div class="formLabels">Contact Last Name:</div><div style="float:left;"><input data-ng-model="tournament.lastName" type="text" placeholder="Last Name"></div><br><div style="clear:both;"></div>
+<div class="formLabels">Contact Email Address:</div><div style="float:left;"><input data-ng-model="tournament.email" type="text" placeholder="Email Address"></div><br><div style="clear:both;"></div>
+<div class="formLabels">Contact Phone Number:</div><div style="float:left;"><input data-ng-model="tournament.phoneNumber" type="text" placeholder="Phone Number"></div><br><div style="clear:both;"></div>
+<div class="formLabels">Tournament Image:</div><div style="float:left;"><input class="formButtons" file-model="tournament.image" type="file" ></div><br><div style="clear:both;"></div>
+    </fieldset>
+<button id="submitAddTournament" class="btn btn-primary" type="button" data-ng-click="createTournament(tournament)"><div class="formButtons">Create Tournament</div></button>
+</div>
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,27 @@
+<br>
+<br>
+<div class="borderOne">
+    <div class="gradientHead">Create Lesson</div><br>
+    <fieldset class="fieldsetText" style="margin-bottom:10px;"><legend>Lesson Information</legend>
+<div class="formLabels">Email Address:</div><div style="float:left;"><input data-ng-model="lesson.email" type="text" placeholder="Email Address"></div><br><div style="clear:both;"></div>
+<div class="formLabels">Tournament:</div><div style="float:left;"><select data-ng-model="lesson.tournament" data-ng-options="tournament.tournamentName for tournament in tournaments"></select></div><br><div style="clear:both;"></div>
+<div class="formLabels">Video:</div><div style="float:left;"><input class="formButtons" file-model="lesson.video" type="file" ></div><br><div style="clear:both;"></div>
+    </fieldset>
+<button id="submitCreateLesson" class="btn btn-primary" type="button" data-ng-click="createLesson(lesson)"><div class="formButtons">Create Lesson</div></button>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

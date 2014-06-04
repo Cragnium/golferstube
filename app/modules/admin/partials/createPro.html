@@ -1,0 +1,49 @@
+<br>
+        <br>
+<div class="borderOne">
+    <div class="gradientHead">Create Pro</div><br>
+    <fieldset class="fieldsetText" style="margin-bottom:10px;"><legend>User Information</legend>
+<div class="formLabels">Email :</div><div style="float:left;"><input data-ng-model="pro.email" type="text" placeholder="Email Address"></div><br><div style="clear:both;"></div>
+<div class="formLabels">Password :</div><div style="float:left;"><input data-ng-model="pro.password" type="text" placeholder="Password"></div><br><div style="clear:both;"></div>
+<div class="formLabels">Confirm Password :</div><div style="float:left;"><input data-ng-model="pro.confirmPassword" type="text" placeholder="Confirm Password"></div><br><div style="clear:both;"></div>
+<div class="formLabels">Screen Name :</div><div style="float:left;"><input data-ng-model="pro.screenName" type="text" placeholder="Screen Name"></div><br><div style="clear:both;"></div>
+<div class="formLabels">First Name :</div><div style="float:left;"><input data-ng-model="pro.firstName" type="text" placeholder="First Name"></div><br><div style="clear:both;"></div>
+<div class="formLabels">Last Name :</div><div style="float:left;"><input data-ng-model="pro.lastName" type="text" placeholder="Last Name"></div><br><div style="clear:both;"></div>
+<div class="formLabels">State :</div><div style="float:left;"><select data-ng-model="pro.state" data-ng-options="state.code for state in states"></select></div><br><div style="clear:both;"></div>
+<div class="formLabels">Country :</div><div style="float:left;"><select data-ng-model="pro.country" data-ng-options="country.code for country in countries"></select></div><br><div style="clear:both;"></div>
+<div class="formLabels">Business Phone :</div><div style="float:left;"><input data-ng-model="pro.businessPhone" type="text" placeholder="Business Phone"></div><br><div style="clear:both;"></div>
+<div class="formLabels">Cell Phone :</div><div style="float:left;"><input data-ng-model="pro.cellPhone" type="text" placeholder="Cell Phone"></div><br><div style="clear:both;"></div>
+    </fieldset>
+
+    <fieldset class="fieldsetText" style="margin-bottom:10px;"><legend>Pro Details</legend>
+    <div class="formLabels">Course :</div><div style="float:left;"><select data-ng-model="pro.course.id" data-ng-options="course.name for course in courses"></select></div><br><div style="clear:both;"></div>
+    <div class="formLabels">Title :</div><div style="float:left;"><input data-ng-model="pro.title" type="text" placeholder="Title"/></div><div style="clear:both;"></div>
+    <div class="formLabels">Title 2 :</div><div style="float:left;"><input data-ng-model="pro.title2" type="text" placeholder="Secondary Title"/></div><div style="clear:both;"></div>
+    <div class="formLabels">Lesson Salutation :</div><div style="float:left;"><input data-ng-model="pro.lessonSalutation" type="text" placeholder="Lesson Salutation"/></div><div style="clear:both;"></div>
+    <div class="formLabels">Biography :</div><div style="float:left;"><textarea rows="5" cols="75" data-ng-model="pro.bio"></textarea></div><div style="clear:both;"></div>
+    <div class="formLabels">Pro Image:</div><div style="float:left;"><input class="formButtons" file-model="pro.image" type="file" ></div><div style="clear:both;"></div>
+    <div class="formLabels">Pro Signature:</div><div style="float:left;"><input class="formButtons" file-model="pro.signature" type="file" ></div><div style="clear:both;"></div>
+
+    </fieldset>
+
+<button id="submitUserAdd" class="btn btn-primary" type="button"
+        data-ng-disabled="!pro.email || !pro.password || !pro.confirmPassword || !pro.screenName"
+        data-ng-click="insertPro(pro)"><div class="formButtons">Create Account</div></button>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

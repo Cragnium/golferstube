@@ -1,0 +1,1 @@
+angular.module('golfersTube.pros', ['golfersTube.pros.controllers', 'golfersTube.pros.services']);

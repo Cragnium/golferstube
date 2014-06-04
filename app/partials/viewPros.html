@@ -1,0 +1,22 @@
+<br>
+<br>
+        <div class="gridHeaderFields">Name</div>
+<div class="gridHeaderFields">Email Address</div>
+<div class="gridHeaderFields">Screen Name</div>
+<div class="gridHeaderFields">Title</div>
+<div class="gridHeaderFields">Secondary Title</div>
+<div class="gridHeaderFields">Course Name</div>
+<div class="gridHeaderFields">Image</div>
+
+
+<div style="clear:both;"></div>
+<div ng-repeat="pro in pros">
+    <div class="formLabels"><a style="text-decoration:none;" href="index.html#/viewProInfo/{{pro.proId}}">{{pro.person.firstName}} {{pro.person.lastName}}</a></div>
+    <div class="formLabels">{{pro.user.email}}</div>
+    <div class="formLabels">{{pro.user.screenName}}</div>
+    <div class="formLabels">{{pro.title}}</div>
+    <div class="formLabels">{{pro.title2}}</div>
+    <div class="formLabels">{{pro.course.name}}</div>
+    <div class="formLabels"><img style="width:150px;" scr="{{pro.proImage.directoryName}}//{pro.proImage.fileName}}"/></div>
+    <div style="clear:both;"></div>
+</div>

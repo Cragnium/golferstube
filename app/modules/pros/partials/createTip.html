@@ -1,0 +1,56 @@
+<br>
+<br>
+<div class="borderOne">
+    <div class="gradientHead">Create Tip</div><br>
+    <p>This page is used to add to your tip library.  If you want to add a new category, fill in the boxes below and click the add button.  If you wish to add a subcategory, or a tip, choose the category and subcategory for the tip.  Then fill
+    out the corresponding fields.</p>
+    <p>If you add a new item and do not see it in the drop down list, click <button class="btn btn-primary" data-ng-click="reload()">RELOAD</button>.</p>
+    <br><br>
+<div style="float:left;padding:10px;">
+    <div class="formLabels">Available Categories :</div><div style="float:left;width:80px;"><select data-ng-model="category.categoryId" data-ng-options="category.name for category in categories"></select></div>
+</div>
+<div style="float:left;padding:10px;">
+    <div class="formLabels" style="width:150px;">Name :</div><div style="float:left;"><input data-ng-model="newCategory.name" type="text" placeholder="Category Name"></div><br><div style="clear:both;"></div>
+    <div class="formLabels" style="width:150px;">Description :</div><div style="float:left;"><input data-ng-model="newCategory.description" type="text" placeholder="Description"/></div><br><div style="clear:both;"></div>
+</div>
+<div style="float:left;padding:10px;">
+    <button id="submitTipCategory" class="btn btn-primary" type="button" data-ng-click="createTipCategory(newCategory)"><div class="formButtons">Update Category</div></button>
+</div>
+<div style="clear:both;"></div>
+<div style="float:left;padding:10px;">
+    <div class="formLabels">Available Subcategories :</div><div style="float:left;width:80px;"><select data-ng-model="subcategory.subcategoryId" data-ng-options="subcategory.name for subcategory in subcategories"></select></div>
+</div>
+<div style="float:left;padding:10px;">
+    <div class="formLabels" style="width:150px;">Name :</div><div style="float:left;"><input data-ng-model="newSubcategory.name" type="text" placeholder="Subcategory Name"></div><br><div style="clear:both;"></div>
+    <div class="formLabels" style="width:150px;">Description :</div><div style="float:left;"><input data-ng-model="newSubcategory.description" type="text" placeholder="Description"/></div><br><div style="clear:both;"></div>
+</div>
+<div style="float:left;padding:10px;">
+    <button id="submitTipSubcategory" class="btn btn-primary" type="button" data-ng-click="createSubCategory(newSubcategory, category.categoryId)"><div class="formButtons">Update Subcategory</div></button>
+</div>
+    <div style="clear:both;"></div>
+<div style="float:left;padding:10px;">
+    <div class="formLabels">Tips:</div><div style="float:left;width:80px"><select data-ng-model="tip.tipId" data-ng-options="tip.name for tip in tips"></select></div>
+</div>
+<div style="float:left;padding:10px;">
+    <div class="formLabels" style="width:150px;">Tip Name:</div><div style="float:left;"><input data-ng-model="newTip.name" type="text" placeholder="Tip Name"/></div>
+    <div style="float:left;padding:10px;"><button class="btn btn-primary" type="button" data-ng-click="createTip(subcategory.subcategoryId, newTip)"><div class="formButtons">Create Tip</div></button></div><div style="clear:both;"></div>
+    <div class="formLabels" style="width:150px;">Tip Description:</div><div style="float:left;"><textarea rows="10" cols="50" data-ng-model="newTip.text" placeholder="Add tip here"></textarea></div><br><div style="clear:both;"></div>
+    <div class="formLabels" style="width:150px;">Tip Video:</div><div style="float:left;"><input class="formButtons" file-model="newTip.video" type="file" /></div><br><div style="clear:both;"></div>
+</div>
+<div style="clear:both;"></div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

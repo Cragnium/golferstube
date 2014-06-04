@@ -1,0 +1,44 @@
+<div style="margin:0 auto;width:1240px;margin-top:60px;">
+    <div class="borderOne" style="width:1060px;min-height:450px;">
+
+        <h3>Tip Library</h3>
+        <br>
+        <p>Below is your tip library.  The top level is all of your tip categories.  To view subcategories, click a category to expand it.</p>
+        <p>When you click on an item in the list, you will be able to edit the value to the right.</p>
+        <p>To add new tips to your library click <a ng-href="#/createTip">Create Tip</a></p>
+        <br>
+        <div style="float:left;">
+    <accordion close-others="oneAtATime">
+        <accordion-group style="width:300px;" heading="{{tipCategory.name}}" ng-repeat="tipCategory in tips" ng-click="editTipCategoryName(tipCategory)">
+            <accordion close-others="oneAtATime" style="padding:0px;">
+                <accordion-group heading="{{tipSubCategory.name}}" ng-repeat="tipSubCategory in tipCategory.subCategories" ng-click="editSubCategoryName(tipSubCategory)">
+                    <accordion close-others="oneAtATime"    >
+                        <accordion-group heading={{tip.name}} ng-repeat="tip in tipSubCategory.tips" ng-click="editTipText(tip)">
+                            <div class="tip-text">{{tip.text}}</div>
+                        </accordion-group>
+                    </accordion>
+                </accordion-group>
+            </accordion>
+        </accordion-group>
+    </accordion>
+        </div>
+        <div style="float:right;width:500px;">
+            <div ng-show="editCat">
+                Category Name : <input ng-model="catToEdit.name"/>
+                <button>Cancel</button>
+                <button>Save</button>
+            </div>
+            <div ng-show="editSub">
+                Category Name : <input ng-model="subToEdit.name"/>
+                <button>Cancel</button>
+                <button>Save</button>
+            </div>
+            <div ng-show="editTip">
+                Tip Text : <textarea rows="4" cols="80" ng-model="tipToEdit.text">{{tipToEdit.text}}</textarea>
+                <button>Cancel</button>
+                <button>Save</button>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    </div>

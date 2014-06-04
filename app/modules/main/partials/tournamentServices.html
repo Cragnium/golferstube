@@ -1,0 +1,59 @@
+<br>
+<br>
+<div class="borderOne">
+    <div class="gradientHead">Tournament Services</div><br>
+    <div>
+        <div style="padding:5px;">
+        Option 1 - GolfersTube will set up our service on a tee box during your Corporate Tournament and record every participant's
+            golf swing from two angles with high speed video. From there the video will be uploaded to our website the same day as
+            the Tournament. Each participant will receive an email with a link that directs them to our website will they will have
+            their own personal account page where the swing videos are stored and could be viewed anytime.
+        </div>
+        <div style="padding:5px;">
+            Option 2 - GolfersTube will set up our service on a tee box during your Corporate Tournament and record every participant's
+            golf swing from two angles with high speed video. From there the video will be uploaded to our website the same day as the
+            Tournament. We will then have PGA Instructors from The Leadbetter Golf Academy analyze each participants swing video. Each partisans
+            will then receive an email with a link that directs them to our website and they will have their own personal account page
+            where the swing videos and the swing analysis from a PGA Instructor are stored and could be viewed anytime.
+            (Swing videos are uploaded the day of Tournament and the Swing Analysis will be uploaded within 5 days from the day of the Tournament date)
+        </div>
+        <div style="padding:5px;">
+        Option 3 - GolfersTube will set up our service on a tee box during your Corporate Tournament and record every participant's golf swing
+            from two angles with high speed video. From there the video will be uploaded to our website the same day as the Tournament. We will
+            then have PGA Instructors from the Host course where the Tournament is being held analyze each participants swing video. Each participant
+            will then receive an email with a link that directs them to our website and they will have their own personal account page where the swing
+            videos and the swing analysis from a PGA Instructor are stored and could be viewed anytime. (Swing videos are uploaded the day of Tournament
+            and the Swing Analysis will be uploaded within 5 days from the day of the Tournament date)
+        </div>
+    </div>
+    <br>
+    <div>
+        <fieldset class="fieldsetText" style="margin-bottom:10px;"><legend>Tournament/Service Information</legend>
+            <div class="formLabels">Name:</div><div style="float:left;"><input data-ng-model="request.name" type="text" placeholder="Name">*</div><br><div style="clear:both;"></div>
+            <div class="formLabels">Email:</div><div style="float:left;"><input data-ng-model="request.email" type="text" placeholder="Email">*</div><br><div style="clear:both;"></div>
+            <div class="formLabels">Phone Number:</div><div style="float:left;"><input data-ng-model="request.phone" type="text" placeholder="Phone Number">*</div><br><div style="clear:both;"></div>
+            <div class="formLabels">Course Name:</div><div style="float:left;"><input data-ng-model="request.course" type="text" placeholder="Course Name">*</div><br><div style="clear:both;"></div>
+            <div class="formLabels">Course Location:</div><div style="float:left;"><input data-ng-model="request.location" type="text" placeholder="Course Location">*</div><br><div style="clear:both;"></div>
+        </fieldset>
+        * Required Field<br><br>
+        <button id="submitServiceRequest" class="btn btn-primary" type="button"
+                data-ng-disabled="!request.name || !request.email || !request.phone || !request.course || !request.location"
+                data-ng-click="requestService(request)"><div class="formButtons">Submit Request</div></button>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

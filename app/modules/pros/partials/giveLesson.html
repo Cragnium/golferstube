@@ -1,0 +1,121 @@
+<div style="width:60%; margin: auto">
+    <div style="float:left;"><img style="width:100px;" src="{{lesson.tournament.image.directory}}/{{lesson.tournament.image.file}}"/></div>
+<div style="float:left;"><h1>Swing Lesson - {{lesson.tournament.tournamentName}}</h1></div>
+<div style="clear:both;"></div>
+<!--<script type="text/javascript">-->
+<!--/* play video twice as fast */-->
+<!--document.getElementById("projekktor").defaultPlaybackRate = 0.5;-->
+<!--document.getElementById("projekktor").play();-->
+
+<!--/* now play three times as fast just for the heck of it */-->
+<!--document.getElementById("videogular").playbackRate = 3.0;-->
+
+<!--window.onload=function(){-->
+<!--document.getElementById("video-js").defaultPlayback‌​Rate=0.1;-->
+<!--document.getElementById("video-js").play();-->
+<!--}-->
+<!--</script>-->
+<!--<div style="float:left;">-->
+<!--<script type="text/javascript">-->
+<!--$(document).ready(function() {-->
+<!--projekktor('#projekktor', {-->
+<!--controls: true,-->
+<!--volume: 0.8,-->
+<!--playbackRate: 0.5,-->
+<!--playlist: [-->
+<!--{-->
+<!--0:{src:'/golferstube/web/video/oceans-clip.mp4', type: 'video/mp4'}-->
+<!--},-->
+<!--{-->
+<!--0:{src:'/golferstube/web/video/oceans-clip.mp4', type: 'video/mp4'}-->
+<!--}-->
+<!--]-->
+<!--});-->
+<!--});-->
+<!--</script>-->
+<!--<div style="float:left;">-->
+<!--<video id="video-js" class="video-js vjs-default-skin"-->
+<!--controls preload="auto" width="640" height="264"-->
+<!--poster="/golferstube/web/video/oceans-clip.png"-->
+<!--title="This is video-js"-->
+<!--data-setup='{"example_option":true}'>-->
+<!--<source src="/golferstube/web/video/oceans-clip.mp4" type='video/mp4' />-->
+<!--</video>-->
+<!--</div>-->
+<div style="float:left;">
+    <videogular vg-width="config.width" vg-height="config.height" vg-theme="config.theme">
+        <video id="videogular" class='videoPlayer' controls preload='none'  title="this is videogular"
+               poster="{{videoImageSource}}"
+               width="100%" height="264" >
+            <source src="{{videoSource}}" type='video/mp4' />
+        </video>
+    </videogular>
+</div>
+<div style="clear:both;"></div>
+
+<!--$scope.video = function(e) {-->
+<!--var videoElements = angular.element(e.srcElement);-->
+<!--videoElements[0].pause();-->
+<!--}-->
+<!--<div style="float:left;">-->
+<!--<video id="projekktor" class="projekktor" poster="intro.png" title="this is projekktor"-->
+<!--poster="/golferstube/web/video/oceans-clip.png"-->
+<!--width="640" height="264" controls preload="none">-->
+<!--<source src="/golferstube/web/video/oceans-clip.mp4" type='video/mp4' />-->
+<!--</video>-->
+<!--</div>-->
+<div style="...">
+    <div style="float:left;width: 50%">
+        <h3>Add Tip</h3>
+        <div style="float:left;width:100px;">Category:</div><div style="float:left;"><select data-ng-model="category.categoryId" data-ng-options="category.name for category in categories"></select></div><div style="clear:both;"></div>
+        <div style="float:left;width:100px;">Subcategory:</div><div style="float:left;"><select data-ng-model="subcategory" data-ng-options="subcategory.name for subcategory in subcategories"></select></div><div style="clear:both;"></div>
+        <div style="float:left;width:100px;">Tip Name:</div><div style="float:left;"><input data-ng-model="newTip.name" type="text" placeholder="Tip Name"/></div><div style="clear:both;"></div>
+
+        <div>Tip</div><div style="clear:both;"></div>
+        <div><textarea rows="5" cols="40" data-ng-model="newTip.text" placeholder="Add tip here"></textarea></div>
+        <div style="float:left;"><button id="addToLesson" class="btn btn-primary" type="button" data-ng-click="addNewTipToLesson(newTip)">Add To Lesson</button></div>
+        <div style="float:left;"><button id="addToLibrary" class="btn btn-primary" type="button" data-ng-click="addTipToLibrary(newTip,subcategory)">Add To Library</button></div>
+        <div style="clear:both;"></div>
+    </div>
+
+    <div style="float:left;width: 50%">
+        <h3>Tip Library</h3>
+        <accordion close-others="oneAtATime">
+            <accordion-group ng-class="btn btn-primary" style="width:300px;" heading="{{tipCategory.name}}" ng-repeat="tipCategory in categories">
+                <accordion close-others="oneAtATime" style="padding:0px;">
+                    <accordion-group heading="{{tipSubCategory.name}}" ng-repeat="tipSubCategory in tipCategory.subCategories">
+                        <accordion close-others="oneAtATime"    >
+                            <accordion-group heading={{tip.name}} ng-repeat="tip in tipSubCategory.tips">
+                                <div class="tip-text" ng-click="addToLesson(tip)">{{tip.text}}</div>
+                            </accordion-group>
+                        </accordion>
+                    </accordion-group>
+                </accordion>
+            </accordion-group>
+        </accordion>
+    </div>
+    <div style="clear:both;"></div>
+
+    <div style="clear:both;">
+        <br><br>
+        Dear {{lesson.student.email}} -
+        <br><br>
+        <textarea rows="10" cols="100">{{lesson.lessonText}}</textarea>
+        <br><br>
+        <div>{{lesson.pro.lessonSalutation}}</div>
+        <div><img style="width:80px;" src="{{lesson.pro.signature.directoryName}}/{{lesson.pro.signature.fileName}}"/></div>
+        <div>Professionally Reviewed by {{lesson.pro.person.firstName}} {{lesson.pro.person.lastName}}</div>
+        <div>{{lesson.pro.title}}</div>
+        <!--<div>Do we really want to give this out? {{lesson.pro.emailAddress}}</div>-->
+
+    </div>
+
+    <div>
+        <div style="float:left;"><button id="cancel" class="btn btn-primary" type="button" data-ng-click="cancel()">Cancel</button></div>
+        <div style="float:left"><button id="saveAndNext" class="btn btn-primary" type="button" data-ng-click="saveAndNext(lesson)">Save & Go To Next Lesson </button></div>
+        <div style="float:left"><button id="saveAndFinish" class="btn btn-primary" type="button" data-ng-click="saveAndFinish(lesson)">Save & End Session</button></div>
+        <!--<div style="float:left"><button id="viewLesson" class="btn btn-primary" type="button" data-ng-click="viewLesson(lesson)">View Lesson</button></div>-->
+    </div>
+</div>
+<div style="clear:both;"></div>
+</div>

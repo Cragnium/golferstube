@@ -1,0 +1,62 @@
+<div style="float:left;">
+<video id="example_video_1" class="video-js vjs-default-skin"
+       controls preload="auto" width="640" height="264"
+       poster="http://video-js.zencoder.com/oceans-clip.png"
+       data-setup='{"example_option":true}'>
+    <source src="http://video-js.zencoder.com/oceans-clip.mp4" type='video/mp4' />
+    <source src="http://video-js.zencoder.com/oceans-clip.webm" type='video/webm' />
+    <source src="http://video-js.zencoder.com/oceans-clip.ogv" type='video/ogg' />
+</video>
+    <div style="clear:both;"></div>
+    <div style="float:left;"><img style="width:100px;" src="{{lesson.tournament.image.directory}}/{{lesson.tournament.image.file}}"/></div>
+    <div style="float:left;"><h1>Swing Lesson - {{lesson.tournament.tournamentName}}</h1></div>
+    <div style="clear:both;"></div>
+    Dear {{lesson.student.email}} -
+    <br><br>
+    <textarea rows="10" cols="100">{{lesson.lessonText}}</textarea>
+    <br><br>
+    <div>{{lesson.pro.lessonSalutation}}</div>
+    <div><img style="width:80px;" src="{{lesson.pro.signature.directoryName}}/{{lesson.pro.signature.fileName}}"/></div>
+    <div>{{lesson.pro.person.firstName}} {{lesson.pro.person.lastName}} pro name will be here</div>
+    <div>{{lesson.pro.title}} pro title will be here</div>
+    <div>{{lesson.pro.emailAddress}} pro email address will be here</div>
+
+</div>
+
+<div style="float:left;">
+    <div>
+        <h3>Add Tip</h3>
+        <div style="float:left;width:100px;">Category:</div><div style="float:left;"><select data-ng-model="category.categoryId" data-ng-options="category.name for category in categories"></select></div><div style="clear:both;"></div>
+        <div style="float:left;width:100px;">Subcategory:</div><div style="float:left;"><select data-ng-model="subcategory" data-ng-options="subcategory.name for subcategory in subcategories"></select></div><div style="clear:both;"></div>
+        <div style="float:left;width:100px;">Tip Name:</div><div style="float:left;"><input data-ng-model="newTip.name" type="text" placeholder="Tip Name"/></div><div style="clear:both;"></div>
+
+        <div>Tip</div><div style="clear:both;"></div>
+        <div><textarea rows="5" cols="40" data-ng-model="newTip.text" placeholder="Add tip here"></textarea></div>
+        <div style="float:left;"><button id="addToLesson" class="btn btn-primary" type="button" data-ng-click="addNewTipToLesson(newTip)">Add To Lesson</button></div>
+        <div style="float:left;"><button id="addToLibrary" class="btn btn-primary" type="button" data-ng-click="addTipToLibrary(newTip,subcategory)">Add To Library</button></div>
+        <div style="clear:both;"></div>
+    </div>
+    <div>
+    <h3>Tip Library</h3>
+        <accordion close-others="oneAtATime">
+            <accordion-group style="width:300px;" heading="{{tipCategory.name}}" ng-repeat="tipCategory in categories">
+                <accordion close-others="oneAtATime" style="padding:0px;">
+                    <accordion-group heading="{{tipSubCategory.name}}" ng-repeat="tipSubCategory in tipCategory.subCategories">
+                        <accordion close-others="oneAtATime"    >
+                            <accordion-group heading={{tip.name}} ng-repeat="tip in tipSubCategory.tips">
+                                <div class="tip-text" ng-click="addToLesson(tip)">{{tip.text}}</div>
+                            </accordion-group>
+                        </accordion>
+                    </accordion-group>
+                </accordion>
+            </accordion-group>
+        </accordion>
+    </div>
+    <div>
+        <div style="float:left;"><button id="cancel" class="btn btn-primary" type="button" data-ng-click="cancel()">Cancel</button></div>
+        <div style="float:left"><button id="saveAndNext" class="btn btn-primary" type="button" data-ng-click="saveAndNext(lesson)">Save -> Next Lesson</button></div>
+        <div style="float:left"><button id="saveAndFinish" class="btn btn-primary" type="button" data-ng-click="saveAndFinish(lesson)">Save -> Finish</button></div>
+    </div>
+</div>
+        <div style="clear:both;"></div>
+

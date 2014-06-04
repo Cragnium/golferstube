@@ -1,0 +1,18 @@
+<div>
+    <div class="modal-header">
+        <img src="web/img/logo.png" style="float:left;padding:20px;"><h1 style="color:white;">Sign In</h1>
+        <div style="clear:both;"></div>
+
+    </div>
+    <div class="modal-body">
+        <div style="width:230px;float:left;text-align:right;padding-right:10px;">email address:</div><input data-ng-model="user.email" type="text" placeholder="Email Address"></div><br><div style="clear:both;"></div>
+        <div style="width:250px;float:left;text-align:right;padding-right:10px;">password:</div><input data-ng-model="user.password" type="password" placeholder="Password"></div><br><div style="clear:both;"></div>
+        <alert ng-repeat="alert in alerts" type="alert.type" close="closeAlert($index)">{{alert.msg}}</alert>
+    </div>
+    <div class="modal-footer">
+        <div style="float:left;margin-right:10px;padding-right:10px;" ng-click="createAccount()">create account</div>
+        <div style="float:left;margin-left:10px;" ng-click="forgotPassword()">forgot password</div>
+        <button class="btn btn-primary" ng-click="login(user)">Login</button>
+        <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+    </div>
+</div>

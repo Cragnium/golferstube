@@ -1,0 +1,84 @@
+<div style="margin: 0 auto; width:1240px;background-color: #EAF7E7;">
+<div style="padding:30px;padding-bottom:50px;">
+    <div style="height:80px;font-size:300%;margin-top:10px;">Pro Dashboard</div>
+    <div style="float:left;">
+        <div class="dashboardSection">
+            <div>
+                <div style="float:left;">
+                    <div class="dashboardSectionTitle">My Tip Library</div>
+                    <button class="dashboardButtons" type="button"  data-ng-click="viewTipLibrary()">View Library</button>
+                </div>
+                <div style="float:right;">
+                    <img ng-src="web/img/icons/Library_GolfersTube.png"/>
+                </div>
+                <div class="dashboardSectionText">
+                    You have {{numberOfTips}} tips in your library
+                </div>
+            </div>
+        </div>
+        <div class="dashboardSection">
+            <div style="float:left;">
+                <div class="dashboardSectionTitle">Completed Lessons</div>
+                <button class="dashboardButtons" type="button" data-ng-click="viewCompleted()">View Completed</button>
+            </div>
+            <div style="float:right;">
+                <img ng-src="web/img/icons/Lessons_GolfersTube.png"/>
+            </div>
+            <div class="dashboardSectionText">
+                You have completed {{numberCompletedLessons}} lessons
+            </div>
+        </div>
+        <div class="dashboardSection">
+            <div style="float:left;">
+                <div class="dashboardSectionTitle">Pending Lessons</div>
+                <button class="dashboardButtons" type="button" data-ng-click="viewPending()">View Pending</button>
+            </div>
+            <div style="float:right;">
+                <img ng-src="web/img/icons/PendingLessons_GolfersTube.png"/>
+            </div>
+            <div class="dashboardSectionText">
+                You have {{numberPendingLessonsForPro}} pending lessons
+            </div>
+        </div>
+        <div class="dashboardSection">
+            <div style="float:left;">
+                <div class="dashboardSectionTitle">My Videos</div>
+                <button class="dashboardButtons" type="button" data-ng-click="viewVideos()">View Videos</button>
+            </div>
+            <div style="float:right;">
+                <img ng-src="web/img/icons/Videos_GolfersTube.png"/>
+            </div>
+            <div class="dashboardSectionText">
+                You have 25 videos in your library
+            </div>
+        </div>
+        <div class="dashboardSection" style="margin-bottom:20px;">
+            <div style="float:left;">
+                <div class="dashboardSectionTitle">Coupons</div>
+                <button class="dashboardButtons" type="button" data-ng-click="viewCoupons()">View Coupons</button>
+            </div>
+            <div style="float:right;">
+                <img ng-src="web/img/icons/Library_GolfersTube.png"/>
+            </div>
+            <div class="dashboardSectionText">
+                You have 10 active coupons
+            </div>
+        </div>
+    </div>
+    <div style="float:left;border:1px solid black;margin-left:16px;margin-top:16px;width:456px;height:1064px;">
+        <div style="margin: 0px auto; width:456px;font-size:300%;text-align: center;margin-bottom:40px;margin-top:20px;">My Bio</div>
+        <div style="float:left;height:200px;width:100px;margin:10px;">Pro Image</div>
+        <div style="float:right;width:210px;margin:10px;">
+            <div style="font-size:200%;">{{pro.person.firstName}} {{pro.person.lastName}}</div>
+            <div style="font-size:150%;">{{pro.title}}</div>
+            <div style="font-size:150%;">{{pro.title2}}</div>
+        </div>
+        <div class="clear"></div>
+        <div >
+            <p style="white-space: pre-line; overflow: hidden; text-overflow: clip; height:620px;padding:10px;">{{pro.bio}}</p>
+        </div>
+        <button class="dashboardButtons" type="button" data-ng-click="editBio()"><div class="formButtons">Edit Bio</div></button>
+    </div>
+</div>
+<div class="clear"></div>
+</div>

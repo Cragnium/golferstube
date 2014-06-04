@@ -1,0 +1,67 @@
+<div style="margin: 0 auto; width:1240px;background-color: #EAF7E7;">
+    <div style="padding:30px;padding-bottom:50px;">
+        <div style="height:80px;font-size:300%;margin-top:10px;">User Dashboard</div>
+        <div style="float:left;">
+            <div class="dashboardSection">
+                <div>
+                    <div style="float:left;">
+                        <div class="dashboardSectionTitle">My Favorites</div>
+                        <button class="dashboardButtons" type="button"  data-ng-click="viewMyFavorites()">View Favorites</button>
+                    </div>
+                    <div style="float:right;">
+                        <img class="dashboardIcons" ng-src="web/img/icons/Favorites_GolfersTube.png"/>
+                    </div>
+                    <div class="dashboardSectionText">
+                        You have {{numberOfFavorites}} favoriteVideos
+                    </div>
+                </div>
+            </div>
+            <div class="dashboardSection">
+                <div style="float:left;">
+                    <div class="dashboardSectionTitle">Completed Lessons</div>
+                    <button class="dashboardButtons" type="button" data-ng-click="viewCompleted()">View Completed</button>
+                </div>
+                <div style="float:right;">
+                    <img class="dashboardIcons" ng-src="web/img/icons/Lessons_GolfersTube.png"/>
+                </div>
+                <div class="dashboardSectionText">
+                    You have completed {{numberCompletedLessons}} lessons
+                </div>
+            </div>
+            <div class="dashboardSection">
+                <div style="float:left;">
+                    <div class="dashboardSectionTitle">My Tips</div>
+                    <button class="dashboardButtons" type="button" data-ng-click="viewTips()">View Tips</button>
+                </div>
+                <div style="float:right;">
+                    <img class="dashboardIcons" ng-src="web/img/icons/Tips_GolfersTube.png"/>
+                </div>
+                <div class="dashboardSectionText">
+                    You have {{numberOfTips}} video tips
+                </div>
+            </div>
+            <div class="dashboardSection">
+                <div style="float:left;">
+                    <div class="dashboardSectionTitle">My Comments</div>
+                    <button class="dashboardButtons" type="button" data-ng-click="viewComments()">View Comments</button>
+                </div>
+                <div style="float:right;">
+                    <img class="dashboardIcons" ng-src="web/img/icons/Comments_GolfersTube.png"/>
+                </div>
+                <div class="dashboardSectionText">
+                    You have made {{numberOfComments}} comments on videos
+                </div>
+            </div>
+            <div class="dashboardSection" style="margin-bottom:20px;">
+                <div style="float:left;">
+                    <div class="dashboardSectionTitle">Account Info</div>
+                    <button class="dashboardButtons" type="button" data-ng-click="viewAccountInfo()">View Account</button>
+                </div>
+                <div style="float:right;">
+                    <img class="dashboardIcons" ng-src="web/img/icons/AcntInfo_GolfersTube.png"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>

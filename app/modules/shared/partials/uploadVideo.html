@@ -1,0 +1,12 @@
+<br><br>
+<div class="borderOne">
+    <div class="gradientHead">Upload Video</div><br>
+    <fieldset class="fieldsetText" style="margin-bottom:10px;"><legend>Upload File</legend>
+        <div class="formLabels">Title:</div><div style="float:left;"><input data-ng-model="video.title" type="text" placeholder="Video Title"/></div><br><div style="clear:both;"></div>
+        <div class="formLabels">Description:</div><div style="float:left;"><input data-ng-model="video.description" type="text" placeholder="Video Description"></div><br><div style="clear:both;"></div>
+        <div class="formLabels">Tags:</div><div style="float:left;"><input data-ng-model="video.tags" type="text" placeholder="Video Tags"></div><br><div style="clear:both;"></div>
+        <div class="formLabels">Video Type:</div><div style="float:left;"><select data-ng-model="video.type" data-ng-options="videoType.code for videoType in videoTypes"></select></div><br><div style="clear:both;"></div>
+        <div class="formLabels">File:</div><div style="float:left;"><input class="formButtons" file-model="video.video" type="file" ></div><br><div style="clear:both;"></div>
+    </fieldset>
+    <button id="submitVideoButton" class="btn btn-primary" type="button" data-ng-click="uploadVideo(video)"><div class="formButtons">Upload Video</div></button>
+</div>

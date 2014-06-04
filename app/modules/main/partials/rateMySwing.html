@@ -1,0 +1,42 @@
+<div>Rate and comment on the swing video's of our members or join GolfersTube.com for free and upload you're own swing video to be rated and commented on. Swing video's will be rated on a scale of 1 - 10 with 1 being the worst and 10 being the best. In the near future there will be monthly tournaments for who has the best swings or craziest golf video's and there will be prizes given away for the winners.</div>
+<div>
+<tabset>
+    <tab ng-repeat="tab in outerTabs" heading={{tab.name}}>
+        <tabset>
+            <tab  ng-repeat="innerTab in tab.tabs" heading={{innerTab.name}} ng-click="clickTab(innerTab)">
+                <div>Rate This Video</div>
+                <rating value="rate" max="max" readonly="isReadonly" on-hover="hoveringOver(value)" on-leave="overStar = null"></rating>
+                <span class="label" ng-class="{'label-warning': percent<30, 'label-info': percent>=30 && percent<70, 'label-success': percent>=70}" ng-show="overStar && !isReadonly">{{percent}}%</span>
+                <div class="clear"></div>
+                <video  class="video-js vjs-default-skin"
+                       controls preload="auto" width="640" height="264"
+                       poster="http://video-js.zencoder.com/oceans-clip.png"
+                       data-setup='{"example_option":true}'>
+                    <source src="http://video-js.zencoder.com/oceans-clip.webm" type='video/webm' />
+                    <source src="http://video-js.zencoder.com/oceans-clip.ogv" type='video/ogg' />
+                </video>
+                <div class="clear"></div>
+                <button class="btn btn-primary" type="button" data-ng-click="previousVideo()"><- Previous Video</button>
+                <button class="btn btn-primary" type="button" data-ng-click="nextVideo()">Next Video -></button>
+                <div>Video Information</div>
+                <div>User Name : {{video.user.name}} </div>
+                <div>Video Name : {{video.name}}</div>
+                <div>Number of times rated : {{video.numberOfTimesRated}}</div>
+                <div>Number of times viewed : {{video.numberOfTimesViewed}}</div>
+                <div>Upload Date : {{video.uploadDate}}</div>
+                <div>Average User Rating : {{video.rating}}</div>
+
+                <div>Video Comments</div>
+                <div>
+                    <div ng-repeat="comment in comments" style="padding:10px;">
+                        <image ng-src="{{comment.user.image}}" style="float:left;width:80px;"/>
+                        <div style="float:left;">
+
+                        </div>
+                    </div>
+                </div>
+
+            </tab>
+        </tabset>
+    </tab>
+</tabset></div>

@@ -1,0 +1,38 @@
+<br>
+        <br>
+<div class="borderOne">
+    <div class="gradientHead">Create Account</div><br>
+    <fieldset class="fieldsetText" style="margin-bottom:10px;"><legend>Account Information</legend>
+<div class="formLabels">Email:</div><div style="float:left;"><input data-ng-model="user.email" type="text" placeholder="Email Address"></div><br><div style="clear:both;"></div>
+<div class="formLabels">Password:</div><div style="float:left;"><input data-ng-model="user.password" type="password" placeholder="Password"></div><br><div style="clear:both;"></div>
+<div class="formLabels">Confirm Password:</div><div style="float:left;"><input data-ng-model="user.confirmPassword" type="password" placeholder="Confirm Password"></div><br><div style="clear:both;"></div>
+<div class="formLabels">Screen Name:</div><div style="float:left;"><input data-ng-model="user.screenName" type="text" placeholder="Screen Name"></div><br><div style="clear:both;"></div>
+    </fieldset>
+    <fieldset class="fieldsetText" style="margin-bottom:10px;"><legend>User Information</legend>
+<div class="formLabels">First Name:</div><div style="float:left;"><input data-ng-model="user.firstName" type="text" placeholder="First Name"></div><br><div style="clear:both;"></div>
+<div class="formLabels">Last Name:</div><div style="float:left;"><input data-ng-model="user.lastName" type="text" placeholder="Last Name"></div><br><div style="clear:both;"></div>
+<div class="formLabels">Gender:</div><div style="float:left;"><select data-ng-model="user.gender" data-ng-options="gender.code for gender in genders"></select></div><br><div style="clear:both;"></div>
+<div class="formLabels">Age:</div><div style="float:left;"><input data-ng-model="user.age" type="text" placeholder="Age"></div><br><div style="clear:both;"></div>
+<div class="formLabels">State:</div><div style="float:left;"><select data-ng-model="user.state" data-ng-options="state.code for state in states"></select></div><br><div style="clear:both;"></div>
+<div class="formLabels">Country:</div><div style="float:left;"><select data-ng-model="user.country" data-ng-options="country.code for country in countries"></select></div><br><div style="clear:both;"></div>
+    </fieldset>
+<button id="submitUserAdd" class="btn btn-primary" type="button"
+        data-ng-disabled="!user.email || !user.password || !user.confirmPassword || !user.screenName"
+        data-ng-click="insertUser(user)"><div class="formButtons">Create Account</div></button>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

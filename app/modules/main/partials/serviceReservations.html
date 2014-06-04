@@ -1,0 +1,20 @@
+<div class="borderOne">
+    <div class="gradientHead">Request Information</div>
+    <br>
+    PGA Teaching Professionals - If you are are interested in offering our services at your golf course and/or are interested in giving the swing analysis for the corporate tournament participants please fill out the form below and we will respond within 24 hours.
+    Tournament Coordinators and Corporate Tournament Planners - If you are are interested in offering our services at your golf course  or your corporate event please fill out the form below and we will respond within 24 hours.
+    <br><br>
+    <div>
+    <fieldset class="fieldsetText" style="margin-bottom:10px;"><legend>Course Information</legend>
+        <div class="formLabels">Name:</div><div style="float:left;"><input data-ng-model="request.name" type="text" placeholder="Name">*</div><br><div style="clear:both;"></div>
+        <div class="formLabels">Email:</div><div style="float:left;"><input data-ng-model="request.email" type="text" placeholder="Email">*</div><br><div style="clear:both;"></div>
+        <div class="formLabels">Phone Number:</div><div style="float:left;"><input data-ng-model="request.phone" type="text" placeholder="Phone Number">*</div><br><div style="clear:both;"></div>
+        <div class="formLabels">Course Name:</div><div style="float:left;"><input data-ng-model="request.course" type="text" placeholder="Course Name">*</div><br><div style="clear:both;"></div>
+        <div class="formLabels">Course Location:</div><div style="float:left;"><input data-ng-model="request.location" type="text" placeholder="Course Location">*</div><br><div style="clear:both;"></div>
+    </fieldset>
+    * Required Field<br><br>
+    <button id="submitServiceRequest" class="btn btn-primary" type="button"
+            data-ng-disabled="!request.name || !request.email || !request.phone || !request.course || !request.location"
+            data-ng-click="requestService(request)"><div class="formButtons">Submit Request</div></button>
+</div>
+</div>

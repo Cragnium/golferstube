@@ -1,0 +1,90 @@
+<div >
+    <carousel interval="myInterval">
+        <slide ng-repeat="slide in slides" active="slide.active">
+            <img ng-src="{{slide.image}}" class="slide">
+
+            <div class="carousel-caption">
+                <p>{{slide.text}}</p>
+            </div>
+        </slide>
+    </carousel>
+</div>
+<br><br>
+<div class="container">
+    <div id="elementStyle2" class="panelSml" ng-click="uploadVideo()">
+        <div class="panelLabels4" >
+            Upload a video of your swing and receive feedback from our users FREE!
+        </div>
+    </div>
+
+    <div class="panelSml" ng-click="login()">
+        <div class="panelLabels2">My Personal</div>
+        <img src="web/img/logo.png"><br>
+
+        <div class="panelLabels2">Page</div>
+    </div>
+
+    <div class="panelLrg"  ng-click="tournamentServices()">
+        <div class="innerPanelLrg">
+            <div class="tournamentText" style="margin:auto;">Tournament Services Featuring</div>
+            <img src="web/img/leadbetterLogo.png" style="width:70%;display:table-cell;margin:auto;vertical-align: middle;"/><br>
+        </div>
+<!--
+
+
+        <div class="panelLabels4">Upload a video of your swing and receive feedback from our users FREE!</div>
+        <img src="web/img/085.JPG" width="100%;" height=100%; style="position:relative;">
+-->
+    </div>
+
+    <div id="elementStyle3" class="panelSml" style="overflow:hidden;" ng-click="bookUs()">
+        <div class="panelLabels4">Book Our Services</div>
+    </div>
+
+    <div id="elementStyle1" class="panelSml" style="overflow:hidden;" ng-click="rateMySwing()">
+        <div class="panelLabels4">Rate My Swing</div>
+
+        <!--
+        <img src="web/img/111.JPG" width="100%" style="top:-50px;position:relative;">
+
+        <div class="panelLabels1">Rate My Swing</div>
+-->
+    </div>
+
+</div>
+
+<!--
+<div class="container">
+    <div id="elementStyle2" class="panelSml">
+        <div class="panelLabels1" ng-click="tournamentServices()">Tournament Services Featuring</div>
+
+        <img src="web/img/leadbetterLogo.png" style="width:100%;margin:0 auto;"><br>
+    </div>
+
+    <div class="panelSml" ng-click="login()">
+        <div class="panelLabels2">My Personal</div>
+        <img src="web/img/logo.png"><br>
+
+        <div class="panelLabels2">Page</div>
+    </div>
+
+    <div class="panelLrg" style="overflow: hidden;" ng-click="uploadVideo()">
+        <div class="panelLabels4">Upload a video of your swing and receive feedback from our users FREE!</div>
+        <img src="web/img/085.JPG" width="100%;" height=100%; style="position:relative;">
+    </div>
+
+    <div id="elementStyle3" class="panelSml" style="overflow:hidden;" ng-click="bookUs()">
+        <div class="panelLabels3">BOOK OUR SERVICES</div>
+    </div>
+
+    <div id="elementStyle1" class="panelSml" style="overflow:hidden;" ng-click="rateMySwing()">
+        <img src="web/img/111.JPG" width="100%" style="top:-50px;position:relative;">
+
+        <div class="panelLabels1">Rate My Swing</div>
+    </div>
+
+</div>
+-->
+
+<div style="clear:both;"></div>
+

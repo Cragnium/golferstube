@@ -1,0 +1,14 @@
+<div style="clear:both;"></div>
+<div ng-view>
+    <div class="formLabelsNoFloat">{{course.name}}</div>
+    <div class="formLabelsNoFloat">{{course.address.addressLine1}}</div>
+    <div class="formLabelsNoFloat">{{course.address.addressLine2}}</div>
+    <div class="formLabelsNoFloat">{{course.address.city}}</div>
+    <div class="formLabelsNoFloat">{{course.address.state.description}}</div>
+    <div class="formLabelsNoFloat">{{course.address.zip}}</div>
+    <div class="formLabelsNoFloat">{{course.phoneNumber.value}}</div>
+<!--
+    <div style="float:left;width:200px;"><img style="width:200px;" src="{{course.courseImage.directoryName}}/{{course.courseImage.fileName}}"/></div>
+-->
+    <div style="clear:both;"></div>
+</div>

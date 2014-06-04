@@ -1,0 +1,40 @@
+<div style="margin:0 auto;">
+<div class="formLabels">CourseName</div>
+<div class="formLabels">Address Line 1</div>
+<div class="formLabels">Address Line 2</div>
+<div class="formLabels">City</div>
+<div class="formLabels">State</div>
+<div class="formLabels">Zip</div>
+<div class="formLabels">Phone Number</div>
+<div class="formLabels">Course Image</div>
+
+
+<div style="clear:both;"></div>
+<div ng-repeat="course in courses">
+    <div class="formLabels"><a style="text-decoration:none;" href="index.html#/viewCourseInfo/{{course.courseId}}">{{course.name}}</a></div>
+    <div class="formLabels">{{course.address.addressLine1}}</div>
+    <div class="formLabels">{{course.address.addressLine2}}</div>
+    <div class="formLabels">{{course.address.city}}</div>
+    <div class="formLabels">{{course.address.state.description}}</div>
+    <div class="formLabels">{{course.address.zip}}</div>
+    <div class="formLabels">{{course.phoneNumber.value}}</div>
+    <div style="float:left;width:200px;"><img style="width:200px;" src="{{course.courseImage.directoryName}}/{{course.courseImage.fileName}}"/></div>
+    <div style="clear:both;"></div>
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

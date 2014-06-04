@@ -1,0 +1,1 @@
+angular.module('golfersTube.admin', ['golfersTube.admin.controllers', 'golfersTube.admin.services']);

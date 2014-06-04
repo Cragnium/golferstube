@@ -1,0 +1,30 @@
+<br>
+<br>
+<div class="borderOne">
+    <div class="gradientHead">Create Coupon</div><br>
+    <fieldset class="fieldsetText" style="margin-bottom:10px;"><legend>Coupon Information</legend>
+        <div class="formLabels">Coupon Name:</div><div style="float:left;"><input data-ng-model="coupon.name" type="text" placeholder="Coupon Name"></div><br><div style="clear:both;"></div>
+        <div class="formLabels">Coupon Location:</div><div style="float:left;"><select data-ng-model="coupon.course" data-ng-options="course.name for course in courses"></select></div><br><div style="clear:both;"></div>
+        <div class="formLabels">Coupon Image:</div><div style="float:left;"><input class="formButtons" file-model="coupon.image" type="file" ></div><br><div style="clear:both;"></div>
+        <div class="formLabels">Limits:</div><div style="float:left;"><input data-ng-model="coupon.limits" type="text" placeholder="Limits"></div><br><div style="clear:both;"></div>
+        <div class="formLabels">When is this valid:</div><div style="float:left;"><input data-ng-model="coupon.valid" placeholder="Valid"></select></div><br><div style="clear:both;"></div>
+        <div class="formLabels">Expiration Date:</div><div style="float:left;"><input data-ng-model="coupon.date" type="text" placeholder="Coupon Expiration"></div><br><div style="clear:both;"></div>
+    </fieldset>
+    <button id="submitAddCourse" class="btn btn-primary" type="button" data-ng-click="insertCoupon(coupon)"><div class="formButtons">Create Coupon</div></button>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

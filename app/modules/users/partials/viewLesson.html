@@ -1,0 +1,52 @@
+<div style="margin:0 auto;width:1240px;">
+    <div style="float:left;width:200px;height:100px;"></div>
+    <div style="float:left;width:800px;height:80px;margin-left:20px;margin-right:20px;background-color:#3f7ebb;margin-top:10px;"><div style="color:white;margin: 0 auto;font-size:300%;text-align:center;vertical-align:middle;padding-top:10px;">{{lesson.tournament.tournamentName}}</div></div>
+    <div style="float:left;width:200px;height:100px;"></div>
+    <div class="clear"></div>
+    <div style="width:1240px;">
+        <videogular vg-width="config.width" vg-height="config.height" vg-theme="config.theme">
+            <video class='videoPlayer' controls preload='none'  title="this is videogular" width="1240" >
+                <source src="http://video-js.zencoder.com/oceans-clip.mp4" type='video/mp4' />
+                <source src="http://video-js.zencoder.com/oceans-clip.webm" type='video/webm' />
+                <source src="http://video-js.zencoder.com/oceans-clip.ogv" type='video/ogg' />
+            </video>
+        </videogular>
+    <div style="width:1240px;padding-right:20px;padding-left:20px;font-size:200%;">
+        <div style="padding-top:100px;">{{lesson.student.email}}</div>
+        <br>
+        <p ng-repeat="lessonText in lesson.lessonTextArray">
+            {{lessonText}}
+        </p>
+        <br>
+        <br>
+        <div>Thank you,</div>
+        <div style="font-family:'Meddon', cursive;font-size:150%;">{{lesson.pro.person.firstName}} {{lesson.pro.person.lastName}}</div>
+        <div class="clear"></div>
+        <div style="padding-top:40px;">
+            <img style="float:left;width:175px;" ng-src="{{lesson.pro.proImage.directoryName}}/{{lesson.pro.proImage.fileName}}"/>
+            <div style="float:left;padding-left:10px;">
+                {{lesson.pro.person.firstName}} {{lesson.pro.person.lastName}}<br>
+                {{lesson.pro.title}}<br>
+                {{lesson.tournament.tournamentLocation.name}}<br>
+                {{lesson.pro.user.email}}
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div class="coupon" style="width:1200px;border:5px black dashed;height:240px;margin-top:50px;margin-bottom:50px;">
+            <img style="float:left;width:240px;height:240px;" ng-src="{{lesson.coupon.couponImage.directory}}/{{lesson.coupon.couponImage.fileName}}"/>
+            <div style="float:left;">
+                <div style="width:900px;text-align:center;padding-top:10px;">Present this coupon at the {{lesson.coupon.location.name}} Pro Shop to receive</div>
+                <div style="width:900px;height:70px;margin-left:20px;margin-right:20px;background-color:#3f7ebb;margin-top:5px;"><div style="color:white;margin: 0 auto;text-align:center;vertical-align:middle;padding-top:5px;font-size:150%;">{{lesson.coupon.name}}</div></div>
+                <div style="width:900px;text-align: center;">{{lesson.coupon.limits}}  See the Pro Shop for details.</div>
+                <div style="width:900px;text-align: center;">Valid {{lesson.coupon.valid}}. Expires {{lesson.coupon.expires | date : medium}}</div>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    </div>
+</div>
+
+
+
+
+

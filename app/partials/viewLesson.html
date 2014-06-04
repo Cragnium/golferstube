@@ -1,0 +1,35 @@
+<div style="float:left;">
+    <video id="example_video_1" class="video-js vjs-default-skin"
+           controls preload="auto" width="640" height="264"
+           poster="http://video-js.zencoder.com/oceans-clip.png"
+           data-setup='{"example_option":true}'>
+        <source src="http://video-js.zencoder.com/oceans-clip.mp4" type='video/mp4' />
+        <source src="http://video-js.zencoder.com/oceans-clip.webm" type='video/webm' />
+        <source src="http://video-js.zencoder.com/oceans-clip.ogv" type='video/ogg' />
+    </video>
+    <div style="clear:both;"></div>
+    <div style="float:left;"><img style="width:100px;" src="{{lesson.tournament.image.directory}}/{{lesson.tournament.image.file}}"/></div>
+    <div style="float:left;"><h1>Swing Lesson - {{lesson.tournament.tournamentName}}</h1></div>
+    <div style="clear:both;"></div>
+    <br><br>
+    <div class="borderTwo">
+    <div class="paragraph">Dear {{lesson.student.email}},
+        <br><br>
+        My name is {{lesson.pro.person.firstName}} {{lesson.pro.person.lastName}} and on behalf of the David Leadbetter
+        Golf Academy and GolfersTube.com I would like to Thank You for giving me the opportunity to give you a swing analysis.
+        <br><br>
+        {{lesson.lessonText}}
+        <br><br>
+        Hopefully these tips will help you to improve your swing and lower your scores. I currently teach at the Leadbetter
+        Academy located in ChampionsGate, Florida. If you are interested in continuing golf instruction you can contact me for more
+        information.
+        <br><br>
+        {{lesson.pro.lessonSalutation}}</div>
+        <div><img style="width:80px;" src="{{lesson.pro.signature.directoryName}}/{{lesson.pro.signature.fileName}}"/></div>
+        <div class="proName">{{lesson.pro.person.firstName}} {{lesson.pro.person.lastName}} pro name will be here</div>
+        <div class="paragraph">{{lesson.pro.title}} pro title will be here</div>
+        <div class="paragraph">{{lesson.pro.emailAddress}} pro email address will be here</div>
+    </div>
+</div>
+
+<div style="clear:both;"></div>

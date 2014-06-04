@@ -1,0 +1,32 @@
+<br>
+<br>
+<div class="borderOne">
+    <div class="gradientHead">Create Course</div><br>
+    <fieldset class="fieldsetText" style="margin-bottom:10px;"><legend>Course Information</legend>
+<div class="formLabels">Course Name:</div><div style="float:left;"><input data-ng-model="course.name" type="text" placeholder="Course Name"></div><br><div style="clear:both;"></div>
+<div class="formLabels">Address Line 1:</div><div style="float:left;"><input data-ng-model="course.addressLine1" type="text" placeholder="Address Line 1"></div><br><div style="clear:both;"></div>
+<div class="formLabels">Address Line 2:</div><div style="float:left;"><input data-ng-model="course.addressLine2" type="text" placeholder="Address Line 2"></div><br><div style="clear:both;"></div>
+<div class="formLabels">City:</div><div style="float:left;"><input data-ng-model="course.city" type="text" placeholder="City"></div><br><div style="clear:both;"></div>
+<div class="formLabels">State:</div><div style="float:left;"><select data-ng-model="course.state" data-ng-options="state.code for state in states"></select></div><br><div style="clear:both;"></div>
+<div class="formLabels">Zip:</div><div style="float:left;"><input data-ng-model="course.zip" type="text" placeholder="Zip Code"></div><br><div style="clear:both;"></div>
+<div class="formLabels">Phone Number:</div><div style="float:left;"><input data-ng-model="course.phone" type="text" placeholder="Phone Number"></div><br><div style="clear:both;"></div>
+<div class="formLabels">Course Image:</div><div style="float:left;"><input class="formButtons" file-model="course.image" type="file" ></div><br><div style="clear:both;"></div>
+    </fieldset>
+<button id="submitAddCourse" class="btn btn-primary" type="button" data-ng-click="insertCourse(course)"><div class="formButtons">Create Course</div></button>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
